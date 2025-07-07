@@ -2,9 +2,9 @@
 const express = require("express");
 const router = express.Router();
 
-const { getAllTeamMembers } = require("../../controllers/superDashboard/superTeamController");
+const { createsuperTeamMember} = require("../../controllers/superDashboard/superTeamController");
 
-// GET /api/super-team-members
-router.get("/super-team-members", getAllTeamMembers);
+// Post super-team-members
+router.post("/create-new-member", createsuperTeamMember);
 
 module.exports = router;
